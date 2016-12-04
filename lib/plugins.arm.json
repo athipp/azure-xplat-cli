@@ -26955,6 +26955,513 @@
       ],
       "categories": {}
     },
+    "as": {
+      "name": "as",
+      "description": "Commands to manage your Azure Analysis Services objects",
+      "fullName": "as",
+      "usage": "[options]",
+      "options": [],
+      "commands": [],
+      "categories": {
+        "server": {
+          "name": "server",
+          "description": "Commands to manage your Azure Analysis Services server instances",
+          "fullName": "as server",
+          "usage": "[options] [command]",
+          "options": [],
+          "commands": [
+            {
+              "name": "create",
+              "description": "Create a new Azure Analysis Services server",
+              "fullName": "as server create",
+              "usage": "[--name <name> --resource-group <resource-group> --location <location> --sku <sku> [options]]",
+              "filePath": "commands/arm/as/as._js",
+              "options": [
+                {
+                  "flags": "-v, --verbose",
+                  "required": 0,
+                  "optional": 0,
+                  "bool": true,
+                  "short": "-v",
+                  "long": "--verbose",
+                  "description": "use verbose output"
+                },
+                {
+                  "flags": "-vv",
+                  "required": 0,
+                  "optional": 0,
+                  "bool": true,
+                  "long": "-vv",
+                  "description": "more verbose with debug output"
+                },
+                {
+                  "flags": "--json",
+                  "required": 0,
+                  "optional": 0,
+                  "bool": true,
+                  "long": "--json",
+                  "description": "use json output"
+                },
+                {
+                  "flags": "-n, --name <name>",
+                  "required": -12,
+                  "optional": 0,
+                  "bool": true,
+                  "short": "-n",
+                  "long": "--name",
+                  "description": "the name of the new Azure Analysis Services server"
+                },
+                {
+                  "flags": "-g, --resource-group <resource-group>",
+                  "required": -22,
+                  "optional": 0,
+                  "bool": true,
+                  "short": "-g",
+                  "long": "--resource-group",
+                  "description": "the resource group to create the account in"
+                },
+                {
+                  "flags": "-l, --location <location>",
+                  "required": -16,
+                  "optional": 0,
+                  "bool": true,
+                  "short": "-l",
+                  "long": "--location",
+                  "description": "the location the Azure Analysis Services server will be created in. Valid values are: North Central US, South Central US, Central US, West Europe, North Europe, West US, East US, East US 2, Japan East, Japan West, Brazil South, Southeast Asia, East Asia, Australia East, Australia Southeast"
+                },
+                {
+                  "flags": "--sku <sku>",
+                  "required": -7,
+                  "optional": 0,
+                  "bool": true,
+                  "long": "--sku",
+                  "description": "the sku of the new Azure Analysis Services server. Valid values are S1, S2, S4, D1"
+                },
+                {
+                  "flags": "-t, --tags [tags]",
+                  "required": 0,
+                  "optional": -12,
+                  "bool": true,
+                  "short": "-t",
+                  "long": "--tags",
+                  "description": "Tags to set to the the Azure Analysis Services server. Can be mutliple. In the format of 'name=value'. Name is required and value is optional. For example, -t tag1=value1;tag2"
+                },
+                {
+                  "flags": "-a, --administrators [administrators]",
+                  "required": 0,
+                  "optional": -22,
+                  "bool": true,
+                  "short": "-a",
+                  "long": "--administrators",
+                  "description": "a comma separated string of user/group accounts that have to be made administrators on the new server. E.x. user1@contoso.com,group1@constso.com"
+                },
+                {
+                  "flags": "-s, --subscription <id>",
+                  "required": -20,
+                  "optional": 0,
+                  "bool": true,
+                  "short": "-s",
+                  "long": "--subscription",
+                  "description": "the subscription identifier"
+                }
+              ]
+            },
+            {
+              "name": "set",
+              "description": "Set properties of an existing Azure Analysis Services server",
+              "fullName": "as server set",
+              "usage": "[--name <name> --resource-group <resource-group> --sku <sku> [options]]",
+              "filePath": "commands/arm/as/as._js",
+              "options": [
+                {
+                  "flags": "-v, --verbose",
+                  "required": 0,
+                  "optional": 0,
+                  "bool": true,
+                  "short": "-v",
+                  "long": "--verbose",
+                  "description": "use verbose output"
+                },
+                {
+                  "flags": "-vv",
+                  "required": 0,
+                  "optional": 0,
+                  "bool": true,
+                  "long": "-vv",
+                  "description": "more verbose with debug output"
+                },
+                {
+                  "flags": "--json",
+                  "required": 0,
+                  "optional": 0,
+                  "bool": true,
+                  "long": "--json",
+                  "description": "use json output"
+                },
+                {
+                  "flags": "-n, --name <name>",
+                  "required": -12,
+                  "optional": 0,
+                  "bool": true,
+                  "short": "-n",
+                  "long": "--name",
+                  "description": "the name of the new Azure Analysis Services server"
+                },
+                {
+                  "flags": "-g, --resource-group <resource-group>",
+                  "required": -22,
+                  "optional": 0,
+                  "bool": true,
+                  "short": "-g",
+                  "long": "--resource-group",
+                  "description": "the resource group to create the account in"
+                },
+                {
+                  "flags": "--sku <sku>",
+                  "required": -7,
+                  "optional": 0,
+                  "bool": true,
+                  "long": "--sku",
+                  "description": "the sku of the new Azure Analysis Services server. Valid values are S1, S2, S4, D1"
+                },
+                {
+                  "flags": "-t, --tags [tags]",
+                  "required": 0,
+                  "optional": -12,
+                  "bool": true,
+                  "short": "-t",
+                  "long": "--tags",
+                  "description": "Tags to set to the the Azure Analysis Services server. Can be mutliple. In the format of 'name=value'. Name is required and value is optional. For example, -t tag1=value1;tag2"
+                },
+                {
+                  "flags": "--no-tags",
+                  "required": 0,
+                  "optional": 0,
+                  "bool": false,
+                  "long": "--no-tags",
+                  "description": "remove all existing tags"
+                },
+                {
+                  "flags": "-a, --administrators [administrators]",
+                  "required": 0,
+                  "optional": -22,
+                  "bool": true,
+                  "short": "-a",
+                  "long": "--administrators",
+                  "description": "a comma separated string of user/group accounts that have to be made administrators on the new server. E.x. user1@contoso.com,group1@constso.com"
+                },
+                {
+                  "flags": "-s, --subscription <id>",
+                  "required": -20,
+                  "optional": 0,
+                  "bool": true,
+                  "short": "-s",
+                  "long": "--subscription",
+                  "description": "the subscription identifier"
+                }
+              ]
+            },
+            {
+              "name": "list",
+              "description": "List all available Analysis Services servers",
+              "fullName": "as server list",
+              "usage": "[--resource-group <resource-group> ]",
+              "filePath": "commands/arm/as/as._js",
+              "options": [
+                {
+                  "flags": "-v, --verbose",
+                  "required": 0,
+                  "optional": 0,
+                  "bool": true,
+                  "short": "-v",
+                  "long": "--verbose",
+                  "description": "use verbose output"
+                },
+                {
+                  "flags": "-vv",
+                  "required": 0,
+                  "optional": 0,
+                  "bool": true,
+                  "long": "-vv",
+                  "description": "more verbose with debug output"
+                },
+                {
+                  "flags": "--json",
+                  "required": 0,
+                  "optional": 0,
+                  "bool": true,
+                  "long": "--json",
+                  "description": "use json output"
+                },
+                {
+                  "flags": "-g, --resource-group <resource-group>",
+                  "required": -22,
+                  "optional": 0,
+                  "bool": true,
+                  "short": "-g",
+                  "long": "--resource-group",
+                  "description": "the optional resource group to list the accounts in"
+                },
+                {
+                  "flags": "-s, --subscription <subscriptionid>",
+                  "required": -20,
+                  "optional": 0,
+                  "bool": true,
+                  "short": "-s",
+                  "long": "--subscription",
+                  "description": "the subscription identifier"
+                }
+              ]
+            },
+            {
+              "name": "show",
+              "description": "Get an available Analysis Services server",
+              "fullName": "as server show",
+              "usage": "[--name <name> --resource-group <resource-group> ]",
+              "filePath": "commands/arm/as/as._js",
+              "options": [
+                {
+                  "flags": "-v, --verbose",
+                  "required": 0,
+                  "optional": 0,
+                  "bool": true,
+                  "short": "-v",
+                  "long": "--verbose",
+                  "description": "use verbose output"
+                },
+                {
+                  "flags": "-vv",
+                  "required": 0,
+                  "optional": 0,
+                  "bool": true,
+                  "long": "-vv",
+                  "description": "more verbose with debug output"
+                },
+                {
+                  "flags": "--json",
+                  "required": 0,
+                  "optional": 0,
+                  "bool": true,
+                  "long": "--json",
+                  "description": "use json output"
+                },
+                {
+                  "flags": "-n, --name <name>",
+                  "required": -12,
+                  "optional": 0,
+                  "bool": true,
+                  "short": "-n",
+                  "long": "--name",
+                  "description": "the Analysis Services server name"
+                },
+                {
+                  "flags": "-g, --resource-group <resource-group>",
+                  "required": -22,
+                  "optional": 0,
+                  "bool": true,
+                  "short": "-g",
+                  "long": "--resource-group",
+                  "description": "the optional resource group to list the accounts in"
+                },
+                {
+                  "flags": "-s, --subscription <subscriptionid>",
+                  "required": -20,
+                  "optional": 0,
+                  "bool": true,
+                  "short": "-s",
+                  "long": "--subscription",
+                  "description": "the subscription identifier"
+                }
+              ]
+            },
+            {
+              "name": "delete",
+              "description": "Delete an available Analysis Services server",
+              "fullName": "as server delete",
+              "usage": "[--name <name> --resource-group <resource-group> ]",
+              "filePath": "commands/arm/as/as._js",
+              "options": [
+                {
+                  "flags": "-v, --verbose",
+                  "required": 0,
+                  "optional": 0,
+                  "bool": true,
+                  "short": "-v",
+                  "long": "--verbose",
+                  "description": "use verbose output"
+                },
+                {
+                  "flags": "-vv",
+                  "required": 0,
+                  "optional": 0,
+                  "bool": true,
+                  "long": "-vv",
+                  "description": "more verbose with debug output"
+                },
+                {
+                  "flags": "--json",
+                  "required": 0,
+                  "optional": 0,
+                  "bool": true,
+                  "long": "--json",
+                  "description": "use json output"
+                },
+                {
+                  "flags": "-n, --name <name>",
+                  "required": -12,
+                  "optional": 0,
+                  "bool": true,
+                  "short": "-n",
+                  "long": "--name",
+                  "description": "the Analysis Services server name"
+                },
+                {
+                  "flags": "-g, --resource-group <resource-group>",
+                  "required": -22,
+                  "optional": 0,
+                  "bool": true,
+                  "short": "-g",
+                  "long": "--resource-group",
+                  "description": "the optional resource group to list the accounts in"
+                },
+                {
+                  "flags": "-s, --subscription <subscriptionid>",
+                  "required": -20,
+                  "optional": 0,
+                  "bool": true,
+                  "short": "-s",
+                  "long": "--subscription",
+                  "description": "the subscription identifier"
+                }
+              ]
+            },
+            {
+              "name": "suspend",
+              "description": "Suspend/Pause a Analysis Services server",
+              "fullName": "as server suspend",
+              "usage": "[--name <name> --resource-group <resource-group> ]",
+              "filePath": "commands/arm/as/as._js",
+              "options": [
+                {
+                  "flags": "-v, --verbose",
+                  "required": 0,
+                  "optional": 0,
+                  "bool": true,
+                  "short": "-v",
+                  "long": "--verbose",
+                  "description": "use verbose output"
+                },
+                {
+                  "flags": "-vv",
+                  "required": 0,
+                  "optional": 0,
+                  "bool": true,
+                  "long": "-vv",
+                  "description": "more verbose with debug output"
+                },
+                {
+                  "flags": "--json",
+                  "required": 0,
+                  "optional": 0,
+                  "bool": true,
+                  "long": "--json",
+                  "description": "use json output"
+                },
+                {
+                  "flags": "-n, --name <name>",
+                  "required": -12,
+                  "optional": 0,
+                  "bool": true,
+                  "short": "-n",
+                  "long": "--name",
+                  "description": "the Analysis Services server name"
+                },
+                {
+                  "flags": "-g, --resource-group <resource-group>",
+                  "required": -22,
+                  "optional": 0,
+                  "bool": true,
+                  "short": "-g",
+                  "long": "--resource-group",
+                  "description": "the optional resource group to list the accounts in"
+                },
+                {
+                  "flags": "-s, --subscription <subscriptionid>",
+                  "required": -20,
+                  "optional": 0,
+                  "bool": true,
+                  "short": "-s",
+                  "long": "--subscription",
+                  "description": "the subscription identifier"
+                }
+              ]
+            },
+            {
+              "name": "resume",
+              "description": "Resume a Analysis Services server",
+              "fullName": "as server resume",
+              "usage": "[--name <name> --resource-group <resource-group> ]",
+              "filePath": "commands/arm/as/as._js",
+              "options": [
+                {
+                  "flags": "-v, --verbose",
+                  "required": 0,
+                  "optional": 0,
+                  "bool": true,
+                  "short": "-v",
+                  "long": "--verbose",
+                  "description": "use verbose output"
+                },
+                {
+                  "flags": "-vv",
+                  "required": 0,
+                  "optional": 0,
+                  "bool": true,
+                  "long": "-vv",
+                  "description": "more verbose with debug output"
+                },
+                {
+                  "flags": "--json",
+                  "required": 0,
+                  "optional": 0,
+                  "bool": true,
+                  "long": "--json",
+                  "description": "use json output"
+                },
+                {
+                  "flags": "-n, --name <name>",
+                  "required": -12,
+                  "optional": 0,
+                  "bool": true,
+                  "short": "-n",
+                  "long": "--name",
+                  "description": "the Analysis Services server name"
+                },
+                {
+                  "flags": "-g, --resource-group <resource-group>",
+                  "required": -22,
+                  "optional": 0,
+                  "bool": true,
+                  "short": "-g",
+                  "long": "--resource-group",
+                  "description": "the optional resource group to list the accounts in"
+                },
+                {
+                  "flags": "-s, --subscription <subscriptionid>",
+                  "required": -20,
+                  "optional": 0,
+                  "bool": true,
+                  "short": "-s",
+                  "long": "--subscription",
+                  "description": "the subscription identifier"
+                }
+              ]
+            }
+          ],
+          "categories": {}
+        }
+      }
+    },
     "availset": {
       "name": "availset",
       "description": "Commands to manage your availability sets.  ",
